@@ -771,7 +771,7 @@ public class MainActivity extends AppCompatActivity {
          */
 
         //init JPlayer
-        jPlayer.initialize("Sharif Uddin Jumman (Jummania)", MainActivity.this);
+        jPlayer.initialize("Sharif Uddin Jumman (Jummania), The author of this player (JPlayer)", MainActivity.this);
         jPlayer.setOnPlayingListener(isPlaying -> {
             if (isPlaying) onPlaying();
             else onPaused();
