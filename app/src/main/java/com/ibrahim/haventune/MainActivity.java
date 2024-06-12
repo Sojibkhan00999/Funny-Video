@@ -42,6 +42,12 @@ import java.util.TimeZone;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    /**
+     * * Created by Jummania on 12,June,2024.
+     * * Email: sharifuddinjumman@gmail.com
+     * * Dhaka, Bangladesh.
+     */
         /*
     >>Source Code provided by
     >>Jubayer Hossain [https://www.facebook.com/JubayerHossainbd]
@@ -50,9 +56,10 @@ public class MainActivity extends AppCompatActivity {
     >>Your positive words help me doing even better
      */
 
+
     ///====================================================
     private static final int TIME_INTERVAL = 2000; // # milliseconds, desired
-
+    final ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
     //=======================================================
     //====================================================================
     //====================================================================
@@ -61,13 +68,10 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton fabButton;
     RelativeLayout _rootLay;
     InterstitialAd mInterstitialAd;
-
     // JPlayer that created by Sharif Uddin Jumman (Jummania)
     JPlayer jPlayer;
     LinearLayout layPlayer;
     ImageView imngClosePlayer, imgPlayPause, imgPrevious, imgNext;
-
-    final ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
     HashMap<String, String> hashMap;
     int PLAYING_NOW = 0;
     boolean playingVideo = false;
@@ -749,7 +753,7 @@ public class MainActivity extends AppCompatActivity {
         layoutContainer = findViewById(R.id.layoutContainer);
         fabButton = findViewById(R.id.fabButton);
         _rootLay = findViewById(R.id._rootLay);
-        jPlayer = findViewById(R.id.youTubePlayerView);
+        jPlayer = findViewById(R.id.jPlayer);
         layPlayer = findViewById(R.id.layPlayer);
         imngClosePlayer = findViewById(R.id.imngClosePlayer);
         imgPlayPause = findViewById(R.id.imgPlayPause);
@@ -760,15 +764,24 @@ public class MainActivity extends AppCompatActivity {
         loadFullscreenAd();
 
 
-        //init Youtube Player View
-        jPlayer.initialize("ABCD", MainActivity.this);
+        /**
+         Author: Sharif Uddin Jumman
+         Email: sharifuddinjumman@gmail.com, arsharifuddinjumman04@gmail.com
+         Location: Dhaka, Bangladesh
+         */
 
-
+        //init JPlayer
+        jPlayer.initialize("Sharif Uddin Jumman (Jummania)", MainActivity.this);
         jPlayer.setOnPlayingListener(isPlaying -> {
             if (isPlaying) onPlaying();
             else onPaused();
         });
 
+        /**
+         Author: Sharif Uddin Jumman
+         Email: sharifuddinjumman@gmail.com, arsharifuddinjumman04@gmail.com
+         Location: Dhaka, Bangladesh
+         */
 
         //Set Date For Cover Section
         SimpleDateFormat formatter = new SimpleDateFormat("MMMM dd, yyyy", Locale.US);

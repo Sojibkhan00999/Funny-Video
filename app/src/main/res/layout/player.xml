@@ -5,12 +5,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!-- Author: Sharif Uddin Jumman -->
+    <!-- Email: sharifuddinjumman@gmail.com, arsharifuddinjumman04@gmail.com -->
+    <!-- Location: Dhaka, Bangladesh -->
+
     <com.ibrahim.haventune.JPlayer
-        android:id="@+id/youTubePlayerView"
+        android:id="@+id/jPlayer"
         android:layout_width="match_parent"
         android:layout_height="220dp"
         android:visibility="visible" />
 
+    <!-- Author: Sharif Uddin Jumman -->
+    <!-- Email: sharifuddinjumman@gmail.com, arsharifuddinjumman04@gmail.com -->
+    <!-- Location: Dhaka, Bangladesh -->
 
     <LinearLayout
         android:layout_width="match_parent"
