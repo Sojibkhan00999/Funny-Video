@@ -1,0 +1,52 @@
+<!-- Author: Sharif Uddin Jumman -->
+<!-- Email: sharifuddinjumman@gmail.com, arsharifuddinjumman04@gmail.com -->
+<!-- Location: Dhaka, Bangladesh -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #player {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Author: Sharif Uddin Jumman -->
+<!-- Email: sharifuddinjumman@gmail.com, arsharifuddinjumman04@gmail.com -->
+<!-- Location: Dhaka, Bangladesh -->
+
+<div id="player"></div>
+<script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            playerVars: {
+                'playsinline': 1,
+                'controls': 0
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    function onPlayerStateChange(event) {
+        JPlayer.isPlaying(event.data == YT.PlayerState.PLAYING);
+    }
+</script>
+</body>
+</html>
